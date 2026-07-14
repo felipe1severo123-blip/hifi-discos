@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel de Cadastro | Hi-Fi Discos</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #121212; color: #f3f4f6; display: flex; justify-content: center; padding: 40px 20px; }
+        .painel { background-color: #1a1a1a; border: 2px solid #f59e0b; border-radius: 12px; padding: 30px; width: 100%; max-width: 650px; box-shadow: 0 10px 30px rgba(0,0,0,0.8); }
+        h2 { color: #f59e0b; text-align: center; margin-bottom: 25px; }
+        .grupo { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px; }
+        input, select { width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #444; background-color: #0a0a0a; color: #fff; font-size: 15px; outline: none; box-sizing: border-box; }
+        input:focus, select:focus { border-color: #f59e0b; }
+        
+        /* Campo ID Liberado para Edição */
+        #id {
+            color: #f59e0b;
+            font-weight: bold;
+        }
+
+        .linha-dupla { display: flex; gap: 15px; }
+        .linha-dupla .grupo { flex: 1; }
+        button.btn-principal { width: 100%; padding: 15px; background-color: #f59e0b; color: #000; border: none; border-radius: 6px; font-weight: bold; font-size: 16px; cursor: pointer; transition: 0.3s; margin-top: 10px; }
+        button.btn-principal:hover { background-color: #d97706; }
+        
+        .resultado-box { margin-top: 25px; padding: 15px; background-color: #000; border: 1px dashed #f59e0b; border-radius: 6px; display: none; }
+        textarea { width: 100%; height: 100px; background: transparent; border: none; color: #10b981; font-family: monospace; font-size: 14px; resize: none; outline: none; }
+        
+        .btn-copiar { width: 100%; padding: 12px; background-color: #10b981; color: #000; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; margin-top: 10px; transition: 0.3s; }
+        .btn-copiar:hover { background-color: #059669; }
+        
+        .info-fotos { font-size: 12px; color: #9ca3af; margin-top: 5px; }
+        .badge-auto { display: inline-block; background: #f59e0b; color: #000; font-size: 10px; padding: 2px 6px; border-radius: 10px; margin-left: 5px; vertical-align: middle; }
+    </style>
+</head>
+<body>
+
+    <div class="painel">
+        <h2>💿 Gerador Automático de Produtos</h2>
+        
+        <div class="linha-dupla">
+            <div class="grupo">
+                <label>ID <span class="badge-auto">Automático</span></label>
+                <!-- Removido o 'readonly' para permitir edição livre -->
+                <input type="number" id="id">
+                <div class="info-fotos">Foto: <b id="nome-foto-dica" style="color:#f59e0b">prod-38-frente.jpg</b></div>
+            </div>
+            <div class="grupo">
+                <label>Formato da Foto:</label>
+                <select id="formato-foto" onchange="atualizarDicaFoto()">
+                    <option value=".jpg">.jpg (Mais comum)</option>
+                    <option value=".jpeg">.jpeg</option>
+                    <option value=".png">.png (Alta qualidade)</option>
+                    <option value=".webp">.webp (Mais leve)</option>
+                </select>
+            </div>
+            <div class="grupo">
+                <label>Categoria:</label>
+                <select id="categoria">
+                    <option value="disco">Disco de Vinil (LP)</option>
+                    <option value="cd">CD Clássico</option>
+                    <option value="dvd">DVD / Show</option>
+                    <option value="colecionavel">Colecionáveis & Raros</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="grupo">
+            <label>Título do Álbum / Produto:</label>
+            <input type="text" id="titulo" placeholder="Ex: Acabou Chorare" required>
+        </div>
+
+        <div class="linha-dupla">
+            <div class="grupo">
+                <label>Artista / Banda:</label>
+                <input type="text" id="artista" placeholder="Ex: Novos Baianos" required>
+            </div>
+            <div class="grupo">
+                <label>Ano de Lançamento:</label>
+                <input type="number" id="ano" placeholder="Ex: 1972" required>
+            </div>
+        </div>
+
+        <div class="linha-dupla">
+            <div class="grupo">
+                <label>Preço de Venda (R$):</label>
+                <input type="text" id="preco" placeholder="Ex: 250,00" required>
+            </div>
+            <div class="grupo">
+                <label>Peso (em gramas):</label>
+                <input type="number" id="peso" placeholder="Ex: 450" value="450" required>
+            </div>
+        </div>
+
+        <div class="grupo">
+            <label>Estado de Conservação:</label>
+            <select id="estado">
+                <option value="EE">Excelente Estado (EE)</option>
+                <option value="LAC">Lacrado / Novo (LAC)</option>
+            </select>
+        </div>
+
+        <button class="btn-principal" onclick="gerarCodigo()">⚙️ Gerar Código do Produto</button>
+
+        <div class="resultado-box" id="resultado-box">
+            <label style="color:#f59e0b;">Copie o código abaixo e cole no seu index.html:</label>
+            <textarea id="codigo-gerado" readonly></textarea>
+            <button class="btn-copiar" onclick="copiarCodigo()">📋 Copiar Código</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let ultimoIdSalvo = localStorage.getItem('hiFiDiscos_UltimoID_v2');
+            
+            if (ultimoIdSalvo) {
+                document.getElementById('id').value = parseInt(ultimoIdSalvo) + 1;
+            } else {
+                document.getElementById('id').value = 38;
+            }
+            
+            atualizarDicaFoto();
+
+            // Ouvinte de evento para atualizar a dica da foto em tempo real enquanto você digita o ID
+            document.getElementById('id').addEventListener('input', atualizarDicaFoto);
+        });
+
+        function atualizarDicaFoto() {
+            const id = document.getElementById('id').value || 'X';
+            const formato = document.getElementById('formato-foto').value;
+            document.getElementById('nome-foto-dica').innerText = `prod-${id}-frente${formato}`;
+        }
+
+        document.getElementById('preco').addEventListener('blur', function(e) {
+            let val = e.target.value.trim();
+            if(val && !val.includes(',')) val += ',00';
+            e.target.value = val;
+        });
+
+        function gerarCodigo() {
+            const id = document.getElementById('id').value;
+            const formato = document.getElementById('formato-foto').value;
+            const categoria = document.getElementById('categoria').value;
+            const titulo = document.getElementById('titulo').value.trim();
+            const artista = document.getElementById('artista').value.trim();
+            const ano = document.getElementById('ano').value;
+            let preco = document.getElementById('preco').value.trim();
+            const peso = document.getElementById('peso').value;
+            const estado = document.getElementById('estado').value;
+
+            if(!id || !titulo || !artista || !preco || !peso) {
+                alert("Por favor, preencha todos os campos.");
+                return;
+            }
+
+            if(!preco.startsWith('R$')) preco = 'R$ ' + preco;
+
+            const codigo = `{ id: ${id}, titulo: "${titulo}", artista: "${artista}", ano: "${ano}", preco: "${preco}", categoria: "${categoria}", peso: ${peso}, estado: "${estado}", capa: "fotos/prod-${id}-frente${formato}", verso: "fotos/prod-${id}-verso${formato}" },`;
+
+            document.getElementById('codigo-gerado').value = codigo;
+            document.getElementById('resultado-box').style.display = 'block';
+
+            // Salva o ID atual. Se você mudou manualmente para 50, o próximo gerado automaticamente será o 51.
+            localStorage.setItem('hiFiDiscos_UltimoID_v2', id);
+        }
+
+        function copiarCodigo() {
+            const textarea = document.getElementById('codigo-gerado');
+            textarea.select();
+            document.execCommand('copy');
+            alert('✅ Código copiado com sucesso!\n\nA página será recarregada agora para o próximo produto.');
+            window.location.reload();
+        }
+    </script>
+</body>
+</html>
