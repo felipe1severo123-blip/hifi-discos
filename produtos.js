@@ -41,5 +41,5 @@ const bancoDeProdutos = [
     { id: 34, titulo: "Poster Star Wars 1977 Emoldurado", artista: "Memorabilia", ano: "1977", preco: "R$ 450,00", categoria: "colecionavel", peso: 1200, estado: "EE", capa: "fotos/prod-34-frente.jpg", verso: "fotos/prod-34-verso.jpg" },
     { id: 35, titulo: "Action Figure Freddie Mercury", artista: "NECA / Queen", ano: "2018", preco: "R$ 320,00", categoria: "colecionavel", peso: 400, estado: "LAC", capa: "fotos/prod-35-frente.jpg", verso: "fotos/prod-35-verso.jpg" },
     { id: 36, titulo: "Toca-Discos Technics SL-1200MK2", artista: "Technics", ano: "1998", preco: "R$ 4.500,00", categoria: "colecionavel", peso: 11000, estado: "EE", capa: "fotos/prod-36-frente.jpg", verso: "fotos/prod-36-verso.jpg" },
-    { id: 37, titulo: "Aphrodite's Child (Disque d'Or)", artista: "Aphrodite's Child", ano: "1975", preco: "R$ 200,00", categoria: "disco", peso: 450, estado: "EE", capa: "fotos/prod-37-frente.jpeg", verso: "fotos/prod-37-verso.jpg" },
+    { id: 37, titulo: "Aphrodite's Child (Disque d'Or)", artista: "Aphrodite's Child", ano: "1975", preco: "R$ 200,00", categoria: "disco", peso: 450, estado: "EE", capa: "fotos/prod-37-frente.jpeg", verso: "fotos/prod-37-verso.jpeg" },
 ];
