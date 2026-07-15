@@ -19,14 +19,14 @@ const bancoDeProdutos = [
 { id: 18, titulo: "CD Nelly - Nellyville", artista: "Nelly", ano: "2002", preco: "R$ 129,90", categoria: "cd", peso: 300, estado: "EE", capa: "fotos/prod-18-frente.jpeg", verso: "fotos/prod-18-verso.jpeg" },
 { id: 19, titulo: "CD Geraldo Vandré - Convite para Ouvir", artista: "Geraldo Vandré", ano: "1997", preco: "R$ 79,90", categoria: "cd", peso: 300, estado: "EE", capa: "fotos/prod-19-frente.jpeg", verso: "fotos/prod-19-verso.jpeg" },
 { id: 20, titulo: "CD Garotos de Ouro - Ao Vivo", artista: "Garotos de Ouro", ano: "2012", preco: "R$ 129,90", categoria: "cd", peso: 300, estado: "LAC", capa: "fotos/prod-20-frente.jpeg", verso: "fotos/prod-20-verso.jpeg" },
-
-
-
-
-
-
-
-
+{ id: 21, titulo: "CD Kid Abelha - Pega Vida", artista: "Kid Abelha", ano: "2005", preco: "R$ 79,90", categoria: "cd", peso: 300, estado: "EE", capa: "fotos/prod-21-frente.jpeg", verso: "fotos/prod-21-verso.jpeg" },
+{ id: 22, titulo: "CD Genesis - Turn It On Again: The Hits", artista: "Genesis", ano: "1999", preco: "R$ 169,90", categoria: "cd", peso: 300, estado: "LAC", capa: "fotos/prod-22-frente.jpeg", verso: "fotos/prod-22-verso.jpeg" },
+{ id: 23, titulo: "CD Black Sabbath - Technical Ecstasy", artista: "Black Sabbath", ano: "1976", preco: "R$ 139,90", categoria: "cd", peso: 300, estado: "EE", capa: "fotos/prod-23-frente.jpeg", verso: "fotos/prod-23-verso.jpeg" },
+{ id: 24, titulo: "CD Francis Hime - Passaredo", artista: "Francis Hime", ano: "1977", preco: "R$ 79,90", categoria: "cd", peso: 300, estado: "EE", capa: "fotos/prod-24-frente.jpeg", verso: "fotos/prod-24-verso.jpeg" },
+{ id: 25, titulo: "CD Restart - Geração Z", artista: "Restart", ano: "2011", preco: "R$ 79,90", categoria: "cd", peso: 300, estado: "LAC", capa: "fotos/prod-25-frente.jpeg", verso: "fotos/prod-25-verso.jpeg" },
+{ id: 26, titulo: "CD Albert & Junior - Albert & Junior", artista: "Albert & Junior", ano: "1995", preco: "R$ 79,90", categoria: "cd", peso: 300, estado: "EE", capa: "fotos/prod-26-frente.jpeg", verso: "fotos/prod-26-verso.jpeg" },
+{ id: 27, titulo: "CD Vitor Ramil - Ramilonga", artista: "Vitor Ramil", ano: "1997", preco: "R$ 129,90", categoria: "cd", peso: 300, estado: "EE", capa: "fotos/prod-27-frente.jpeg", verso: "fotos/prod-27-verso.jpeg" },
+{ id: 28, titulo: "CD Fats Domino - The Best of Fats Domino", artista: "Fats Domino", ano: "1993", preco: "R$ 79,90", categoria: "cd", peso: 300, estado: "EE", capa: "fotos/prod-28-frente.jpeg", verso: "fotos/prod-28-verso.jpeg" },
 
 
 
