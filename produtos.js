@@ -18,6 +18,28 @@ const bancoDeProdutos = [
 { id: 17, titulo: "CD Nana Mouskouri - The Magic of Nana Mouskouri", artista: "Nana Mouskouri", ano: "1988", preco: "R$ 79,90", categoria: "cd", peso: 300, estado: "EE", capa: "fotos/prod-17-frente.jpeg", verso: "fotos/prod-17-verso.jpeg" },
 { id: 18, titulo: "CD Nelly - Nellyville", artista: "Nelly", ano: "2002", preco: "R$ 129,90", categoria: "cd", peso: 300, estado: "EE", capa: "fotos/prod-18-frente.jpeg", verso: "fotos/prod-18-verso.jpeg" },
 { id: 19, titulo: "CD Geraldo Vandré - Convite para Ouvir", artista: "Geraldo Vandré", ano: "1997", preco: "R$ 79,90", categoria: "cd", peso: 300, estado: "EE", capa: "fotos/prod-19-frente.jpeg", verso: "fotos/prod-19-verso.jpeg" },
+{ id: 20, titulo: "CD Garotos de Ouro - Ao Vivo", artista: "Garotos de Ouro", ano: "2012", preco: "R$ 129,90", categoria: "cd", peso: 300, estado: "LAC", capa: "fotos/prod-20-frente.jpeg", verso: "fotos/prod-20-verso.jpeg" },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
