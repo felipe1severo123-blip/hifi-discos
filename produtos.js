@@ -27,5 +27,12 @@ const bancoDeProdutos = [
   { id: 26, titulo: "CD Albert & Junior - Albert & Junior", artista: "Albert & Junior", ano: "1995", preco: "R$ 79,90", categoria: "cd", peso: 300, estado: "EE", capa: "images/26t.jpg", verso: "images/26_verso.jpg" },
   { id: 27, titulo: "CD Vitor Ramil - Ramilonga", artista: "Vitor Ramil", ano: "1997", preco: "R$ 129,90", categoria: "cd", peso: 300, estado: "EE", capa: "images/27t.jpg", verso: "images/27_verso.jpg" },
   { id: 28, titulo: "CD Fats Domino - The Best of Fats Domino", artista: "Fats Domino", ano: "1993", preco: "R$ 79,90", categoria: "cd", peso: 300, estado: "EE", capa: "images/28t.jpg", verso: "images/28_verso.jpg" },
-  { id: 29, titulo: "CD Kita - Twisted Complicated World", artista: "Kita", ano: "1999", preco: "R$ 79,90", categoria: "cd", peso: 300, estado: "EE", capa: "images/11189f.jpg", verso: "images/11189t.jpg" }
+  { id: 11189, titulo: "CD Kita - Twisted Complicated World", artista: "Kita", ano: "1999", preco: "R$ 79,90", categoria: "cd", peso: 300, estado: "EE", capa: "images/11189f.jpg", verso: "images/11189b.jpg" }
+{ id: 2852, titulo: "CD Villa-Lobos E Os Brinquedos De Roda", artista: "Desconhecido", ano: "2003", preco: "N/A", categoria: "cd", peso: null, estado: null, capa: "images/2852f.jpg", verso: "images/2852b.jpg" }
+{ id: 10763, titulo: "CD Os Robertos", artista: "Desconhecido", ano: "N/A", preco: "N/A", categoria: "cd", peso: null, estado: null, capa: "images/10763f.jpg", verso: "images/10763b.jpg" }
+{ id: 4140, titulo: "CD Nostalgia Vol. III", artista: "Desconhecido", ano: "1993", preco: "N/A", categoria: "cd", peso: null, estado: null, capa: "images/4140f.jpg", verso: "images/4140b.jpg" }
+{ id: 1867, titulo: "CD My Own Best Enemy", artista: "Desconhecido", ano: "N/A", preco: "N/A", categoria: "cd", peso: null, estado: null, capa: "images/1867f.jpg", verso: "images/1867b.jpg" }
+{ id: 2373, titulo: "CD NorthSound/Pachelbel Ocean", artista: "Desconhecido", ano: "N/A", preco: "N/A", categoria: "cd", peso: null, estado: null, capa: "images/2373f.jpg", verso: "images/2373b.jpg" }
+{ id: 2799, titulo: "CD Ettore Stratta/Symphonic Boleros", artista: "Ettore Stratta", ano: "N/A", preco: "N/A", categoria: "cd", peso: null, estado: null, capa: "images/2799f.jpg", verso: "images/2799b.jpg" }
+{ id: 4209, titulo: "CD Cinemusica Vol. II", artista: "Desconhecido", ano: "N/A", preco: "N/A", categoria: "cd", peso: null, estado: null, capa: "images/4209f.jpg", verso: "images/4209b.jpg" }
 ];
