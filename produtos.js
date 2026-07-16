@@ -27,5 +27,5 @@ const bancoDeProdutos = [
   { id: 26, titulo: "CD Albert & Junior - Albert & Junior", artista: "Albert & Junior", ano: "1995", preco: "R$ 79,90", categoria: "cd", peso: 300, estado: "EE", capa: "images/26t.jpg", verso: "images/26_verso.jpg" },
   { id: 27, titulo: "CD Vitor Ramil - Ramilonga", artista: "Vitor Ramil", ano: "1997", preco: "R$ 129,90", categoria: "cd", peso: 300, estado: "EE", capa: "images/27t.jpg", verso: "images/27_verso.jpg" },
   { id: 28, titulo: "CD Fats Domino - The Best of Fats Domino", artista: "Fats Domino", ano: "1993", preco: "R$ 79,90", categoria: "cd", peso: 300, estado: "EE", capa: "images/28t.jpg", verso: "images/28_verso.jpg" },
-  { id: 29, titulo: "CD Splendid - Twisted Complicated World", artista: "Splendid", ano: "1999", preco: "R$ 79,90", categoria: "cd", peso: 300, estado: "EE", capa: "images/11189t.jpg", verso: "images/11189f.jpg" }
+  { id: 29, titulo: "CD Splendid - Twisted Complicated World", artista: "Splendid", ano: "1999", preco: "R$ 79,90", categoria: "cd", peso: 300, estado: "EE", capa: "images/11189f.jpg", verso: "images/11189t.jpg" }
 ];
